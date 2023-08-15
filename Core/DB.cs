@@ -14,20 +14,19 @@ public class DB : IDisposable
     {
         SQLiteConnection.CreateFile(DB_NAME);
         string sql = "CREATE TABLE Produto ( "+
-                     "id                      INT PRIMARY KEY AUTO_INCREMENT, "+
-                     "nome                    VARCHAR(100) NOT NULL, "+
-                     "quantidade_estoque      INT NOT NULL, "+
-                     "preco                   INT NOT NULL, "+
-                     "id_fornecedor           INT NOT NULL, "+
-                     "FOREIGN KEY (id_fornecedor) REFERENCES Fornecedor(id));";
-        command = new(sql, connection);
-        connection.Open();
-        command.ExecuteNonQuery();
-        connection.Close();
+                     "id                      INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                     "nome                    TEXT NOT NULL, "+
+                     "quantidade_estoque      INTEGER NOT NULL, " +
+                     "preco                   INTEGER NOT NULL, " +
+                     "id_fornecedor           INTEGER NOT NULL); ";
+        Command(sql);
+        Connect();
+        ExecuteRowReturn();
+        Dispose();
     }
     public void Connect()
     {
-        if(connection == null || connection.State == ConnectionState.Closed) {
+        if(connection != null || connection.State == ConnectionState.Closed) {
             connection.Open();
         }
     }
