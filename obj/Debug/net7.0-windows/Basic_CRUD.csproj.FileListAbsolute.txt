@@ -1,0 +1,4 @@
+E:\workspace\Basic_CRUD\obj\Debug\net7.0-windows\Basic_CRUD.GeneratedMSBuildEditorConfig.editorconfig
+E:\workspace\Basic_CRUD\obj\Debug\net7.0-windows\Basic_CRUD.AssemblyInfoInputs.cache
+E:\workspace\Basic_CRUD\obj\Debug\net7.0-windows\Basic_CRUD.AssemblyInfo.cs
+E:\workspace\Basic_CRUD\obj\Debug\net7.0-windows\Basic_CRUD.csproj.CoreCompileInputs.cache
