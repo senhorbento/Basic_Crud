@@ -11,12 +11,12 @@ public class ProdutoController
     {
         using DB db = new();
         db.Connect();
-        db.Command("INSERT INTO Produto (nome, quantidade_estoque, preco, id_fornecedor) " +
-                   "VALUES (@nome, @quantidade_estoque, @preco, @id_fornecedor)");
+        db.Command("INSERT INTO Produto (nome, quantidade_estoque, preco, unidade) " +
+                   "VALUES (@nome, @quantidade_estoque, @preco, @unidade)");
         db.Parameter("@nome", p.nome);
         db.Parameter("@quantidade_estoque", p.quantidade_estoque);
         db.Parameter("@preco", p.preco);
-        db.Parameter("@id_fornecedor", p.id_fornecedor);
+        db.Parameter("@unidade", p.unidade);
         db.ExecuteRowReturn();
     }
 
@@ -34,8 +34,8 @@ public class ProdutoController
                 id = int.Parse(reader["id"].ToString()!),
                 nome = reader["nome"].ToString()!,
                 quantidade_estoque = int.Parse(reader["quantidade_estoque"].ToString()!),
-                preco = int.Parse(reader["preco"].ToString()!),
-                id_fornecedor = int.Parse(reader["id_fornecedor"].ToString()!)
+                preco = decimal.Parse(reader["preco"].ToString()!),
+                unidade = reader["unidade"].ToString()!
             });
         }
         return list;
@@ -55,8 +55,8 @@ public class ProdutoController
                 id = int.Parse(reader["id"].ToString()!),
                 nome = reader["nome"].ToString()!,
                 quantidade_estoque = int.Parse(reader["quantidade_estoque"].ToString()!),
-                preco = int.Parse(reader["preco"].ToString()!),
-                id_fornecedor = int.Parse(reader["id_fornecedor"].ToString()!)
+                preco = decimal.Parse(reader["preco"].ToString()!),
+                unidade = reader["unidade"].ToString()!
             };
         }
         return null;
@@ -65,12 +65,12 @@ public class ProdutoController
     {
         using DB db = new();
         db.Connect();
-        db.Command("UPDATE Produto SET nome = @nome, quantidade_estoque = @quantidade_estoque, preco = @preco, id_fornecedor = @id_fornecedor WHERE id = @id");
+        db.Command("UPDATE Produto SET nome = @nome, quantidade_estoque = @quantidade_estoque, preco = @preco, unidade = @unidade WHERE id = @id");
         db.Parameter("@id", p.id);
         db.Parameter("@nome", p.nome);
         db.Parameter("@quantidade_estoque", p.quantidade_estoque);
         db.Parameter("@preco", p.preco);
-        db.Parameter("@id_fornecedor", p.id_fornecedor);
+        db.Parameter("@unidade", p.unidade);
         db.ExecuteRowReturn();
     }
     public void Delete(int id)

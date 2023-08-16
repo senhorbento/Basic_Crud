@@ -17,8 +17,8 @@ public class DB : IDisposable
                      "id                      INTEGER PRIMARY KEY AUTOINCREMENT, "+
                      "nome                    TEXT NOT NULL, "+
                      "quantidade_estoque      INTEGER NOT NULL, " +
-                     "preco                   INTEGER NOT NULL, " +
-                     "id_fornecedor           INTEGER NOT NULL); ";
+                     "preco                   REAL NOT NULL," +
+                     "unidade                 TEXT NOT NULL);";
         Command(sql);
         Connect();
         ExecuteRowReturn();
