@@ -13,15 +13,14 @@ public class DB : IDisposable
     public void Init()
     {
         SQLiteConnection.CreateFile(DB_NAME);
-        string sql = "CREATE TABLE Produto ( "+
-                     "id                      INTEGER PRIMARY KEY AUTOINCREMENT, "+
-                     "nome                    TEXT NOT NULL, "+
-                     "quantidade_estoque      INTEGER NOT NULL, " +
-                     "preco                   REAL NOT NULL," +
-                     "unidade                 TEXT NOT NULL);";
-        Command(sql);
+        Command("CREATE TABLE Produto ( " +
+                "id                      INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "nome                    TEXT NOT NULL, " +
+                "quantidade_estoque      INTEGER NOT NULL, " +
+                "preco                   REAL NOT NULL," +
+                "unidade                 TEXT NOT NULL);");
         Connect();
-        ExecuteRowReturn();
+        Execute();
         Dispose();
     }
     public void Connect()
@@ -38,13 +37,13 @@ public class DB : IDisposable
     {
         command.Parameters.AddWithValue(key, value);
     }
-    public int ExecuteRowReturn()
+    public dynamic Execute()
     {
+        if (command.CommandText.ToUpper().Contains("SELECT"))
+        {
+            return command.ExecuteReader();
+        }
         return command.ExecuteNonQuery();
-    }
-    public SQLiteDataReader ExecuteReaderReturn()
-    {
-        return command.ExecuteReader();
     }
     public void Dispose()
     {
