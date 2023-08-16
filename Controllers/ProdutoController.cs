@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SQLite;
 using Core;
 using Models;
@@ -17,7 +15,7 @@ public class ProdutoController
         db.Parameter("@quantidade_estoque", p.quantidade_estoque);
         db.Parameter("@preco", p.preco);
         db.Parameter("@unidade", p.unidade);
-        db.ExecuteRowReturn();
+        db.Execute();
     }
 
     public List<Produto> GetAll()
@@ -26,7 +24,7 @@ public class ProdutoController
         using DB db = new();
         db.Connect();
         db.Command("SELECT * FROM Produto");
-        using SQLiteDataReader reader = db.ExecuteReaderReturn();
+        using SQLiteDataReader reader = db.Execute();
         while (reader.Read())
         {
             list.Add(new Produto
@@ -47,7 +45,7 @@ public class ProdutoController
         db.Connect();
         db.Command("SELECT * FROM Produto WHERE id = @id");
         db.Parameter("@id", id);
-        using SQLiteDataReader reader = db.ExecuteReaderReturn();
+        using SQLiteDataReader reader = db.Execute();
         if (reader.Read())
         {
             return new Produto
@@ -71,7 +69,7 @@ public class ProdutoController
         db.Parameter("@quantidade_estoque", p.quantidade_estoque);
         db.Parameter("@preco", p.preco);
         db.Parameter("@unidade", p.unidade);
-        db.ExecuteRowReturn();
+        db.Execute();
     }
     public void Delete(int id)
     {
@@ -79,6 +77,6 @@ public class ProdutoController
         db.Connect();
         db.Command("DELETE FROM Produto WHERE id = @id");
         db.Parameter("@id", id);
-        db.ExecuteRowReturn();
+        db.Execute();
     }
 }
