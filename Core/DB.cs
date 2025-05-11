@@ -11,7 +11,10 @@ public class DB : IDisposable
 
     public void Init()
     {
-        SQLiteConnection.CreateFile(DB_NAME);
+        if (!File.Exists(DB_NAME))
+        {
+            SQLiteConnection.CreateFile(DB_NAME);
+        }
         Command("CREATE TABLE IF NOT EXISTS Produto ( " +
                 "id                      INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nome                    TEXT NOT NULL, " +
