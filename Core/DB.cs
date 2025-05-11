@@ -12,7 +12,7 @@ public class DB : IDisposable
     public void Init()
     {
         SQLiteConnection.CreateFile(DB_NAME);
-        Command("CREATE TABLE Produto ( " +
+        Command("CREATE TABLE IF NOT EXISTS Produto ( " +
                 "id                      INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nome                    TEXT NOT NULL, " +
                 "quantidade_estoque      INTEGER NOT NULL, " +

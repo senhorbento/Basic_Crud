@@ -28,20 +28,20 @@ partial class MainForm
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-        dataGridView1 = new DataGridView();
+        dataGridViewProdutos = new DataGridView();
         BtSearch = new Button();
         BtInsert = new Button();
         BtDelete = new Button();
         BtUpdate = new Button();
         txtBoxSearch = new TextBox();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dataGridViewProdutos).BeginInit();
         SuspendLayout();
         // 
-        // dataGridView1
+        // dataGridViewProdutos
         // 
-        dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        resources.ApplyResources(dataGridView1, "dataGridView1");
-        dataGridView1.Name = "dataGridView1";
+        dataGridViewProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        resources.ApplyResources(dataGridViewProdutos, "dataGridViewProdutos");
+        dataGridViewProdutos.Name = "dataGridViewProdutos";
         // 
         // BtSearch
         // 
@@ -84,21 +84,21 @@ partial class MainForm
         Controls.Add(BtDelete);
         Controls.Add(BtInsert);
         Controls.Add(BtSearch);
-        Controls.Add(dataGridView1);
+        Controls.Add(dataGridViewProdutos);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
         MdiChildrenMinimizedAnchorBottom = false;
         MinimizeBox = false;
         Name = "MainForm";
         ShowIcon = false;
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dataGridViewProdutos).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
 
     #endregion
 
-    private DataGridView dataGridView1;
+    private DataGridView dataGridViewProdutos;
     private Button BtSearch;
     private Button BtInsert;
     private Button BtDelete;

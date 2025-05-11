@@ -29,6 +29,7 @@ namespace Basic_CRUD.Views
                 _produtoController.Insert(produto);
             if (Text == "Atualizar")
                 _produtoController.Update(produto);
+            MessageBox.Show("Produto salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 

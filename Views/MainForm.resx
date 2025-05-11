@@ -118,26 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dataGridViewProdutos.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dataGridViewProdutos.Size" type="System.Drawing.Size, System.Drawing">
     <value>776, 389</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridViewProdutos.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
+  <data name="&gt;&gt;dataGridViewProdutos.Name" xml:space="preserve">
+    <value>dataGridViewProdutos</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewProdutos.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewProdutos.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewProdutos.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="BtSearch.Location" type="System.Drawing.Point, System.Drawing">
