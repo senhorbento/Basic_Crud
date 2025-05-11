@@ -1,12 +1,15 @@
 using Basic_CRUD.Views;
 using Controllers;
 using Models;
+using System.ComponentModel;
 
 namespace Basic_CRUD;
 
 public partial class MainForm : Form
 {
     private readonly ProdutoController _produtoController = new();
+    private List<Produto> allProdutos = [];
+
     public MainForm()
     {
         InitializeComponent();
@@ -15,7 +18,8 @@ public partial class MainForm : Form
 
     private void FillGridView()
     {
-        dataGridViewProdutos.DataSource = _produtoController.GetAll();
+        allProdutos = _produtoController.GetAll();
+        dataGridViewProdutos.DataSource = allProdutos;
     }
 
     private Produto? GetSelected()
@@ -32,6 +36,21 @@ public partial class MainForm : Form
             MessageBox.Show($"Selecione {message} 1 produto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         return produto;
+    }
+
+    private void FilterGrid(string searchText)
+    {
+        if (string.IsNullOrWhiteSpace(searchText))
+        {
+            dataGridViewProdutos.DataSource = allProdutos;
+        }
+        else
+        {
+            List<Produto> filtered = allProdutos
+                .Where(p => p.nome.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+            dataGridViewProdutos.DataSource = filtered;
+        }
     }
 
     private void BtInsert_Click(object sender, EventArgs e)
@@ -71,5 +90,10 @@ public partial class MainForm : Form
                 FillGridView();
             }
         }
+    }
+
+    private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+    {
+        FilterGrid(txtBoxSearch.Text);
     }
 }

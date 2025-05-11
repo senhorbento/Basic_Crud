@@ -122,7 +122,7 @@
     <value>12, 12</value>
   </data>
   <data name="dataGridViewProdutos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 389</value>
+    <value>695, 389</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridViewProdutos.TabIndex" type="System.Int32, mscorlib">
@@ -139,30 +139,6 @@
   </data>
   <data name="&gt;&gt;dataGridViewProdutos.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="BtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>713, 415</value>
-  </data>
-  <data name="BtSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="BtSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="BtSearch.Text" xml:space="preserve">
-    <value>Procurar</value>
-  </data>
-  <data name="&gt;&gt;BtSearch.Name" xml:space="preserve">
-    <value>BtSearch</value>
-  </data>
-  <data name="&gt;&gt;BtSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtSearch.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="BtInsert.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 415</value>
@@ -186,7 +162,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtInsert.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="BtDelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>174, 415</value>
@@ -210,7 +186,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtDelete.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BtUpdate.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 415</value>
@@ -234,7 +210,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtUpdate.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtBoxSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>389, 415</value>
@@ -255,6 +231,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBoxSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LbFiltro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LbFiltro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 418</value>
+  </data>
+  <data name="LbFiltro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="LbFiltro.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LbFiltro.Text" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="&gt;&gt;LbFiltro.Name" xml:space="preserve">
+    <value>LbFiltro</value>
+  </data>
+  <data name="&gt;&gt;LbFiltro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LbFiltro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LbFiltro.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -271,7 +274,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>719, 450</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

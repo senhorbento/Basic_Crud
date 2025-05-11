@@ -29,11 +29,11 @@ partial class MainForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         dataGridViewProdutos = new DataGridView();
-        BtSearch = new Button();
         BtInsert = new Button();
         BtDelete = new Button();
         BtUpdate = new Button();
         txtBoxSearch = new TextBox();
+        LbFiltro = new Label();
         ((System.ComponentModel.ISupportInitialize)dataGridViewProdutos).BeginInit();
         SuspendLayout();
         // 
@@ -42,12 +42,6 @@ partial class MainForm
         dataGridViewProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         resources.ApplyResources(dataGridViewProdutos, "dataGridViewProdutos");
         dataGridViewProdutos.Name = "dataGridViewProdutos";
-        // 
-        // BtSearch
-        // 
-        resources.ApplyResources(BtSearch, "BtSearch");
-        BtSearch.Name = "BtSearch";
-        BtSearch.UseVisualStyleBackColor = true;
         // 
         // BtInsert
         // 
@@ -74,16 +68,22 @@ partial class MainForm
         // 
         resources.ApplyResources(txtBoxSearch, "txtBoxSearch");
         txtBoxSearch.Name = "txtBoxSearch";
+        txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
+        // 
+        // LbFiltro
+        // 
+        resources.ApplyResources(LbFiltro, "LbFiltro");
+        LbFiltro.Name = "LbFiltro";
         // 
         // MainForm
         // 
         resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
+        Controls.Add(LbFiltro);
         Controls.Add(txtBoxSearch);
         Controls.Add(BtUpdate);
         Controls.Add(BtDelete);
         Controls.Add(BtInsert);
-        Controls.Add(BtSearch);
         Controls.Add(dataGridViewProdutos);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
@@ -99,10 +99,10 @@ partial class MainForm
     #endregion
 
     private DataGridView dataGridViewProdutos;
-    private Button BtSearch;
     private Button BtInsert;
     private Button BtDelete;
     private Button BtUpdate;
     private TextBox textBox1;
     private TextBox txtBoxSearch;
+    private Label LbFiltro;
 }
