@@ -1,5 +1,5 @@
 ﻿namespace Basic_CRUD;
-partial class Main
+partial class MainForm
 {
     /// <summary>
     ///  Required designer variable.
@@ -27,13 +27,13 @@ partial class Main
     /// </summary>
     private void InitializeComponent()
     {
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         dataGridView1 = new DataGridView();
         BtSearch = new Button();
         BtInsert = new Button();
         BtDelete = new Button();
         BtUpdate = new Button();
-        textBox1 = new TextBox();
+        txtBoxSearch = new TextBox();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -42,7 +42,6 @@ partial class Main
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         resources.ApplyResources(dataGridView1, "dataGridView1");
         dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowTemplate.Height = 25;
         // 
         // BtSearch
         // 
@@ -55,29 +54,32 @@ partial class Main
         resources.ApplyResources(BtInsert, "BtInsert");
         BtInsert.Name = "BtInsert";
         BtInsert.UseVisualStyleBackColor = true;
+        BtInsert.Click += BtInsert_Click;
         // 
         // BtDelete
         // 
         resources.ApplyResources(BtDelete, "BtDelete");
         BtDelete.Name = "BtDelete";
         BtDelete.UseVisualStyleBackColor = true;
+        BtDelete.Click += BtDelete_Click;
         // 
         // BtUpdate
         // 
         resources.ApplyResources(BtUpdate, "BtUpdate");
         BtUpdate.Name = "BtUpdate";
         BtUpdate.UseVisualStyleBackColor = true;
+        BtUpdate.Click += BtUpdate_Click;
         // 
-        // textBox1
+        // txtBoxSearch
         // 
-        resources.ApplyResources(textBox1, "textBox1");
-        textBox1.Name = "textBox1";
+        resources.ApplyResources(txtBoxSearch, "txtBoxSearch");
+        txtBoxSearch.Name = "txtBoxSearch";
         // 
-        // Main
+        // MainForm
         // 
         resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
-        Controls.Add(textBox1);
+        Controls.Add(txtBoxSearch);
         Controls.Add(BtUpdate);
         Controls.Add(BtDelete);
         Controls.Add(BtInsert);
@@ -85,8 +87,9 @@ partial class Main
         Controls.Add(dataGridView1);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
+        MdiChildrenMinimizedAnchorBottom = false;
         MinimizeBox = false;
-        Name = "Main";
+        Name = "MainForm";
         ShowIcon = false;
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
@@ -101,4 +104,5 @@ partial class Main
     private Button BtDelete;
     private Button BtUpdate;
     private TextBox textBox1;
+    private TextBox txtBoxSearch;
 }

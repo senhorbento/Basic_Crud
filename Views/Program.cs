@@ -15,6 +15,6 @@ static class Program
         using DB db = new();
         db.Init();
         ApplicationConfiguration.Initialize();
-        Application.Run(new Main());
+        Application.Run(new MainForm());
     }
 }
