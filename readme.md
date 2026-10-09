@@ -20,7 +20,7 @@ This project demonstrates how to create a simple CRUD (Create, Read, Update, Del
 
 ```
 Basic_Crud/
-├── Controllers/      # Business logic and data handling
+├── Repository/       # Data handling
 ├── Core/             # Application configuration and startup
 ├── Models/           # Data models (e.g., Product)
 ├── Views/            # Windows Forms UI

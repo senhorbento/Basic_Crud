@@ -1,12 +1,12 @@
 using Basic_CRUD.Views;
-using Controllers;
+using Repository;
 using Models;
 
 namespace Basic_CRUD;
 
 public partial class MainForm : Form
 {
-    private readonly ProdutoController _produtoController = new();
+    private readonly ProdutoRepository _produtoRepository = new();
     private List<Produto> allProdutos = [];
 
     public MainForm()
@@ -17,7 +17,7 @@ public partial class MainForm : Form
 
     private void FillGridView()
     {
-        allProdutos = _produtoController.GetAll();
+        allProdutos = _produtoRepository.GetAll();
         dataGridViewProdutos.DataSource = allProdutos;
     }
 
@@ -81,10 +81,10 @@ public partial class MainForm : Form
         Produto? p = GetSelected();
         if (p != null)
         {
-            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este produto?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este produto?", "Confirmaï¿½ï¿½o", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                _produtoController.Delete(p.id);
+                _produtoRepository.Delete(p.id);
                 MessageBox.Show("Produto excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FillGridView();
             }

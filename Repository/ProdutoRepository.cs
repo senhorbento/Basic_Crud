@@ -2,8 +2,8 @@ using System.Data.SQLite;
 using Core;
 using Models;
 
-namespace Controllers;
-public class ProdutoController
+namespace Repository;
+public class ProdutoRepository
 {
     public void Insert(Produto p)
     {

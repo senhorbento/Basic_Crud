@@ -1,4 +1,4 @@
-﻿using Controllers;
+﻿using Repository;
 using Models;
 using System.Diagnostics;
 
@@ -8,7 +8,7 @@ namespace Basic_CRUD.Views
     public partial class InsertUpdateForm : Form
     {
         private Produto produto = new();
-        private readonly ProdutoController _produtoController = new();
+        private readonly ProdutoRepository _produtoRepository = new();
         public InsertUpdateForm(Produto? obj = null)
         {
             InitializeComponent();
@@ -26,16 +26,16 @@ namespace Basic_CRUD.Views
         private void BtSalvar_Click(object sender, EventArgs e)
         {
             if(Text == "Inserir")
-                _produtoController.Insert(produto);
+                _produtoRepository.Insert(produto);
             if (Text == "Atualizar")
-                _produtoController.Update(produto);
+                _produtoRepository.Update(produto);
             MessageBox.Show("Produto salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
         private void BtCancelar_Click(object sender, EventArgs e)
         {
-            _produtoController.Update(produto);
+            _produtoRepository.Update(produto);
             Close();
         }
     }
